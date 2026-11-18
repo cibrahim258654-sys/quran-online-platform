@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07110f">
+  <meta name="description" content="Noor Classroom — a calm, connected space for Quran learning around the world.">
+  <title>Noor Classroom | Learn Quran Together</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { ink:'#07110f', panel:'#0d1b17', panel2:'#11231d', emerald:'#1f9b70', gold:'#d7b66d', muted:'#8ea39a' },
+      fontFamily: { sans:['DM Sans','sans-serif'], display:['Manrope','sans-serif'], arabic:['Amiri','serif'] }
+    }}};
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-ink text-white font-sans min-h-screen">
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Noor Classroom home">
+      <span class="brand-mark">ن</span><span><strong>NOOR</strong><small>CLASSROOM</small></span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
+      <a href="#how" data-i18n="navHow">How it works</a><a href="#features" data-i18n="navFeatures">Features</a>
+      <a href="#teacher" data-i18n="navTeacher">For teachers</a>
+    </nav>
+    <div class="header-actions">
+      <select id="languageSelect" class="language-select" aria-label="Select language">
+        <option value="en">English</option><option value="ar">عربي</option><option value="fr">Français</option>
+      </select>
+      <button id="headerJoin" class="btn btn-outline" data-i18n="joinRoom">Join a class</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="eyebrow">A more meaningful way to learn</span></div>
+        <h1 data-i18n-html="heroTitle">Bring the light of the<br><em>Quran</em> closer.</h1>
+        <p class="hero-lead" data-i18n="heroLead">A peaceful online classroom for Quran teachers and students, wherever they are in the world.</p>
+        <div class="hero-actions">
+          <button id="createHero" class="btn btn-primary"><span data-i18n="createClass">Create a classroom</span><span>↗</span></button>
+          <button id="joinHero" class="btn btn-ghost" data-i18n="joinWithLink">Join with a link</button>
+        </div>
+        <div class="trust-row"><div class="avatar-stack"><span>م</span><span>A</span><span>S</span><span>+</span></div><span data-i18n="globalNote">Made for learning across borders</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="ornament-ring ring-a"></div><div class="ornament-ring ring-b"></div>
+        <div class="hero-card">
+          <div class="hero-card-top"><span class="live-pill"><i></i> <span data-i18n="liveLearning">LIVE LEARNING</span></span><span class="tiny-glyph">۞</span></div>
+          <div class="quran-art">
+            <div class="quran-frame"><div class="quran-top">۞ ۞ ۞</div><div class="quran-title">الْقُرْآنُ الْكَرِيمُ</div><div class="quran-sub">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div><div class="quran-lines">﴿ إِنَّ مَعَ الْعُسْرِ يُسْرًا ﴾<br>فَإِذَا فَرَغْتَ فَانْصَبْ</div><div class="quran-bottom">۞</div></div>
+          </div>
+          <div class="hero-card-footer"><span class="sound-wave"><i></i><i></i><i></i><i></i><i></i></span><span data-i18n="recitation">A moment of recitation</span><span class="gold-dot"></span></div>
+        </div>
+        <div class="floating-note note-top"><span>✦</span><div><b data-i18n="oneToOne">One-to-one</b><small data-i18n="personalLearning">Personal learning</small></div></div>
+        <div class="floating-note note-bottom"><span class="note-icon">◉</span><div><b data-i18n="worldwide">Worldwide</b><small data-i18n="learnTogether">Learn together</small></div></div>
+      </div>
+    </section>
+
+    <section id="how" class="steps-section section-wrap">
+      <div class="section-heading"><span class="eyebrow" data-i18n="simpleByDesign">SIMPLE BY DESIGN</span><h2 data-i18n="startInMoments">A classroom in moments.</h2><p data-i18n="stepsLead">No accounts for students. No complicated setup. Just learning.</p></div>
+      <div class="steps-grid">
+        <article class="step-card"><span class="step-num">01</span><div class="step-icon">✧</div><h3 data-i18n="step1Title">Create a room</h3><p data-i18n="step1Text">The teacher creates a private room and gets a unique invitation link.</p></article>
+        <article class="step-card"><span class="step-num">02</span><div class="step-icon">↗</div><h3 data-i18n="step2Title">Share the link</h3><p data-i18n="step2Text">Send the link to your student anywhere in the world.</p></article>
+        <article class="step-card"><span class="step-num">03</span><div class="step-icon">۞</div><h3 data-i18n="step3Title">Learn together</h3><p data-i18n="step3Text">Meet, recite, follow the Mushaf and practise Tajweed in one space.</p></article>
+      </div>
+    </section>
+
+    <section id="features" class="features-section section-wrap">
+      <div class="section-heading"><span class="eyebrow" data-i18n="thoughtfulTools">THOUGHTFUL TOOLS</span><h2 data-i18n="everythingInOne">Everything your lesson needs.</h2></div>
+      <div class="feature-grid">
+        <article class="feature-card feature-large"><div class="feature-copy"><span class="feature-icon">◉</span><h3 data-i18n="featureVideo">Face-to-face connection</h3><p data-i18n="featureVideoText">Clear audio and video powered by Jitsi Meet, with echo cancellation and familiar call controls.</p></div><div class="mini-call"><div class="mini-person"><span>م</span><small>Teacher</small></div><div class="mini-person student"><span>أ</span><small>Student</small></div><div class="mini-controls">●　◉　▣　☎</div></div></article>
+        <article class="feature-card"><span class="feature-icon">۞</span><h3 data-i18n="featureMushaf">A shared Mushaf</h3><p data-i18n="featureMushafText">Choose a Surah and Ayah. The lesson follows the same selection for everyone.</p><div class="feature-preview arabic-preview">وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا</div></article>
+        <article class="feature-card"><span class="feature-icon">✎</span><h3 data-i18n="featureBoard">Tajweed whiteboard</h3><p data-i18n="featureBoardText">Draw letters, mark articulation points and explain rules visually.</p><div class="board-preview"><span>مَـدّ</span><i></i><b>◌</b></div></article>
+        <article class="feature-card"><span class="feature-icon">⌘</span><h3 data-i18n="featureGlobal">Made for global lessons</h3><p data-i18n="featureGlobalText">A responsive experience for learners joining from phones, tablets and computers.</p><div class="timezone-row"><span>🇺🇸 New York</span><span>🇬🇧 London</span><span>🇫🇷 Paris</span></div></article>
+      </div>
+    </section>
+
+    <section id="teacher" class="teacher-section section-wrap">
+      <div class="teacher-panel"><div><span class="eyebrow" data-i18n="teacherSpace">TEACHER SPACE</span><h2 data-i18n="readyToTeach">Your next lesson<br><em>starts here.</em></h2><p data-i18n="teacherLead">Create a room, keep your class links close, and give every student a calm place to learn.</p></div><button id="createBottom" class="btn btn-primary"><span data-i18n="openTeacherSpace">Open teacher space</span><span>↗</span></button><div class="panel-seal">ن</div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="#"><span class="brand-mark">ن</span><span><strong>NOOR</strong><small>CLASSROOM</small></span></a><p data-i18n="footerText">A little more light in every lesson.</p><span>© <span id="year"></span> Noor Classroom</span></footer>
+
+  <!-- Dialogs -->
+  <dialog id="createDialog" class="modal">
+    <form method="dialog" class="modal-card" id="createForm">
+      <button class="modal-close" value="cancel" aria-label="Close">×</button><span class="eyebrow" data-i18n="newClass">NEW CLASSROOM</span>
+      <h2 data-i18n="createPrivate">Create a private class</h2><p data-i18n="createExplain">Add a student name or a lesson label. Your invitation link will be ready instantly.</p>
+      <label data-i18n="studentLabel" for="studentName">Student name / class label</label><input id="studentName" maxlength="60" placeholder="e.g. Amina's Quran lesson">
+      <div class="modal-actions"><button type="button" class="btn btn-ghost" id="cancelCreate" data-i18n="cancel">Cancel</button><button type="submit" class="btn btn-primary" data-i18n="generateLink">Generate class link</button></div>
+      <div id="createdLink" class="created-link hidden"><span data-i18n="linkReady">Your classroom link is ready</span><div><input id="shareUrl" readonly><button type="button" id="copyCreated" class="btn btn-small">Copy</button></div></div>
+    </form>
+  </dialog>
+
+  <dialog id="joinDialog" class="modal">
+    <form method="dialog" class="modal-card" id="joinForm"><button class="modal-close" value="cancel" aria-label="Close">×</button><span class="eyebrow" data-i18n="welcomeBack">WELCOME</span><h2 data-i18n="joinClassTitle">Join your classroom</h2><p data-i18n="joinExplain">Paste the invitation link or enter the room code shared by your teacher.</p><label for="roomInput" data-i18n="roomLinkLabel">Class link or room code</label><input id="roomInput" placeholder="noorclassroom.com/?room=..."><label for="joinName" data-i18n="yourName">Your name</label><input id="joinName" maxlength="50" placeholder="Name"><div class="modal-actions"><button type="button" class="btn btn-ghost" id="cancelJoin" data-i18n="cancel">Cancel</button><button type="submit" class="btn btn-primary" data-i18n="continue">Continue</button></div></form>
+  </dialog>
+
+  <section id="classroom" class="classroom hidden">
+    <div class="class-topbar"><a class="brand" href="#" id="homeFromRoom"><span class="brand-mark">ن</span><span><strong>NOOR</strong><small>CLASSROOM</small></span></a><div class="room-meta"><span class="live-dot"></span><span data-i18n="classInProgress">CLASS IN PROGRESS</span><span id="roomCodeLabel"></span></div><button id="copyRoom" class="btn btn-outline btn-small" data-i18n="copyInvite">Copy invite</button><button id="exitRoom" class="icon-btn" aria-label="Exit classroom">×</button></div>
+    <div class="class-layout">
+      <div class="call-column">
+        <div class="call-frame"><div id="jitsiMount" class="jitsi-mount"><div class="call-placeholder"><div class="call-orb">ن</div><h2 data-i18n="connecting">Your classroom is ready</h2><p data-i18n="connectHint">Allow microphone and camera access when prompted.</p><button id="startCall" class="btn btn-primary" data-i18n="startVideo">Start video classroom</button><small data-i18n="jitsiNotice">Video is provided by Jitsi Meet.</small></div></div></div>
+        <div class="call-toolbar"><button id="micBtn" class="tool-btn" disabled><span>🎙</span><small data-i18n="mute">Mute</small></button><button id="camBtn" class="tool-btn" disabled><span>▣</span><small data-i18n="camera">Camera</small></button><button id="shareBtn" class="tool-btn" disabled><span>▧</span><small data-i18n="shareScreen">Share screen</small></button><button id="hangupBtn" class="tool-btn danger" disabled><span>☎</span><small data-i18n="leaveCall">Leave call</small></button></div>
+      </div>
+      <aside class="lesson-column">
+        <div class="lesson-tabs"><button class="tab active" data-tab="mushaf" data-i18n="mushafTab">Mushaf</button><button class="tab" data-tab="board" data-i18n="boardTab">Whiteboard</button></div>
+        <div id="mushafPanel" class="lesson-panel">
+          <div class="panel-heading"><div><span class="eyebrow" data-i18n="quranReader">QURAN READER</span><h3 data-i18n="sharedMushaf">Shared Mushaf</h3></div><span class="sync-badge"><i></i><span data-i18n="synced">SYNCED</span></span></div>
+          <div class="quran-selects"><label><span data-i18n="surah">Surah</span><select id="surahSelect"></select></label><label><span data-i18n="ayah">Ayah</span><input id="ayahSelect" type="number" min="1" value="1"></label><button id="goAyah" class="btn btn-small btn-primary" data-i18n="go">Go</button></div>
+          <div class="mushaf-paper"><div class="paper-top">۞ ۞ ۞</div><div id="surahTitle" class="paper-surah arabic">سُورَةُ الْفَاتِحَة</div><div id="ayahText" class="ayah-text arabic">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div><div id="ayahNumber" class="ayah-number">1</div><div class="paper-bottom">۞</div></div>
+          <div class="mushaf-nav"><button id="prevAyah" class="btn btn-ghost btn-small" data-i18n="previous">Previous</button><span id="positionLabel">1 : 1</span><button id="nextAyah" class="btn btn-ghost btn-small" data-i18n="next">Next</button></div>
+          <p class="sync-caption" data-i18n="syncCaption">Surah and Ayah selection is shared with participants in this room.</p>
+        </div>
+        <div id="boardPanel" class="lesson-panel hidden">
+          <div class="panel-heading"><div><span class="eyebrow" data-i18n="teachingBoard">TEACHING TOOL</span><h3 data-i18n="tajweedBoard">Tajweed whiteboard</h3></div><span class="sync-badge"><i></i><span data-i18n="liveBoard">LIVE BOARD</span></span></div>
+          <div class="board-tools"><label data-i18n="inkColor">Ink</label><input type="color" id="inkColor" value="#d7b66d"><label data-i18n="brushSize">Size</label><input type="range" id="brushSize" min="2" max="18" value="4"><button id="eraserBtn" class="btn btn-ghost btn-small" data-i18n="eraser">Eraser</button><button id="clearBoard" class="btn btn-ghost btn-small" data-i18n="clear">Clear</button></div>
+          <canvas id="whiteboard" width="900" height="600" aria-label="Shared Tajweed whiteboard"></canvas><p class="sync-caption" data-i18n="boardCaption">Draw with your finger or mouse. Board updates are sent to everyone in the room.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="https://meet.jit.si/external_api.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
